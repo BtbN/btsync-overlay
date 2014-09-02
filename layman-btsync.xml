@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>                                                                                                     
+<repositories version="1.0">
+        <repo priority="50" quality="experimental" status="unofficial">
+                <name>btsync</name>
+                <description>Overlay for btsync and related ebuilds</description>
+                <homepage>https://git.btbn.de/gitweb/btsync-overlay.git</homepage>
+                <source type="git">git://git.btbn.de/btsync-overlay.git</source>
+        </repo>
+</repositories>
