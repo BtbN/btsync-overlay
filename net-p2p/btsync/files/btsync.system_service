@@ -1,11 +1,14 @@
 [Unit]
-Description=btsync
+Description=btsync for %i
 After=network.target
 
 [Service]
-User=btsync
-Group=btsync
-ExecStart=/usr/bin/btsync --config /etc/btsync.conf --nodaemon
+User=%i
+PermissionsStartOnly=true
+ExecStartPre=/bin/bash -c "test -f /etc/btsync-%i.conf || /usr/bin/btsync --dump-sample-config > /etc/btsync-%i.conf"
+ExecStartPre=/bin/chown %i /etc/btsync-%i.conf
+ExecStartPre=/bin/chmod 600 /etc/btsync-%i.conf
+ExecStart=/usr/bin/btsync --config /etc/btsync-%i.conf --nodaemon
 Restart=always
 RestartSec=5
 

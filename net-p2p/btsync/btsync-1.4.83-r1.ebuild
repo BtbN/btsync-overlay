@@ -37,8 +37,8 @@ src_install() {
 	newinitd "${FILESDIR}/btsync_initd" btsync
 	newconfd "${FILESDIR}/btsync_confd" btsync
 
-	systemd_newunit "${FILESDIR}/btsync.system_service" btsync.service
-	systemd_newuserunit "${FILESDIR}/btsync.user_service" btsync.service
+	systemd_newunit "${FILESDIR}/btsync.system_service" "btsync@.service"
+	systemd_newuserunit "${FILESDIR}/btsync.user_service" "btsync.service"
 
 	insinto /etc
 	doins "${FILESDIR}/btsync.conf"
