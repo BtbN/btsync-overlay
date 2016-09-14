@@ -8,9 +8,9 @@ inherit pax-utils eutils systemd user
 
 DESCRIPTION="Sync stuff via BitTorrent"
 HOMEPAGE="https://www.getsync.com/"
-SRC_URI="amd64? ( https://download-cdn.getsync.com/${PV}/linux-x64/BitTorrent-Sync_x64.tar.gz -> ${P}_amd64.tar.gz )
-	x86? ( https://download-cdn.getsync.com/${PV}/linux-i386/BitTorrent-Sync_i386.tar.gz -> ${P}_x86.tar.gz )
-	arm? ( https://download-cdn.getsync.com/${PV}/linux-arm/BitTorrent-Sync_arm.tar.gz -> ${P}_arm.tar.gz )"
+SRC_URI="amd64? ( https://download-cdn.getsync.com/stable/linux-x64/resilio-sync_x64.tar.gz -> ${P}_amd64.tar.gz )
+	x86? ( https://download-cdn.getsync.com/stable/linux-i386/resilio-sync_i386.tar.gz -> ${P}_x86.tar.gz )
+	arm? ( https://download-cdn.getsync.com/stable/linux-armhf/resilio-sync_armhf.tar.gz -> ${P}_arm.tar.gz )"
 
 RESTRICT="mirror"
 
