@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"
 
-QA_PREBUILT="usr/bin/btsync"
+QA_PREBUILT="usr/bin/rslsync"
 
 pkg_setup() {
 	enewuser btsync -1 -1 /var/lib/btsync
@@ -43,8 +43,9 @@ src_install() {
 	doins "${FILESDIR}/btsync.conf"
 
 	mkdir -p "${ED}/usr/bin"
-	cp btsync "${ED}/usr/bin/btsync"
-	pax-mark m "${ED}/usr/bin/btsync"
+	cp rslsync "${ED}/usr/bin/rslsync"
+	pax-mark m "${ED}/usr/bin/rslsync"
+	dosym rslsync /usr/bin/btsync
 
 	dodir /var/lib/btsync
 	fperms 0700 /var/lib/btsync
