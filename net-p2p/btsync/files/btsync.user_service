@@ -3,7 +3,7 @@ Description=btsync
 After=network.target
 
 [Service]
-ExecStartPre=mkdir -p %h/.config
+ExecStartPre=/bin/mkdir -p %h/.config
 ExecStartPre=/bin/bash -c "test -f %h/.config/btsync.conf || /usr/bin/btsync --dump-sample-config > %h/.config/btsync.conf"
 ExecStart=/usr/bin/btsync --nodaemon --config %h/.config/btsync.conf
 Restart=always
