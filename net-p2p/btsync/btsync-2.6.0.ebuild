@@ -13,7 +13,7 @@ SRC_URI="amd64? ( https://download-cdn.getsync.com/${PV}/linux-x64/resilio-sync_
 
 RESTRICT="mirror"
 
-LICENSE="BitTorrent"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~arm ~ppc"
 IUSE=""
